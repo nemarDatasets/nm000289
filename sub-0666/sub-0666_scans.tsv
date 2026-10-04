@@ -1,0 +1,2 @@
+filename	hour_after_arrest	start_time_after_arrest	duration	sampling_frequency	powerline_frequency	n_eeg_channels	n_channels	n_bad_channels
+eeg/sub-0666_task-icu_acq-h022_run-001_eeg.edf	022	22:10:22	2776.0	256	60	20	22	0

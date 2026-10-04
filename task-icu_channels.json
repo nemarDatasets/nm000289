@@ -1,0 +1,8 @@
+{
+  "group": {
+    "Description": "The source WFDB record of the channel in the PhysioNet release: EEG, ECG, REF or OTHER. The records of one segment share sampling rate and length and are merged into one EDF."
+  },
+  "n_missing_samples": {
+    "Description": "Number of samples of this channel missing in the source WFDB record."
+  }
+}

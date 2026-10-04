@@ -1,0 +1,11 @@
+filename	hour_after_arrest	start_time_after_arrest	duration	sampling_frequency	powerline_frequency	n_eeg_channels	n_channels	n_bad_channels
+eeg/sub-0589_task-icu_acq-h017_run-001_eeg.edf	017	17:31:46	1694.0	500	50	19	21	1
+eeg/sub-0589_task-icu_acq-h018_run-002_eeg.edf	018	18:00:00	3600.0	500	50	19	21	1
+eeg/sub-0589_task-icu_acq-h019_run-003_eeg.edf	019	19:00:00	3600.0	500	50	19	21	1
+eeg/sub-0589_task-icu_acq-h020_run-004_eeg.edf	020	20:00:00	3600.0	500	50	19	21	1
+eeg/sub-0589_task-icu_acq-h021_run-005_eeg.edf	021	21:00:00	1906.0	500	50	19	21	1
+eeg/sub-0589_task-icu_acq-h040_run-006_eeg.edf	040	40:37:05	1375.0	500	50	19	21	1
+eeg/sub-0589_task-icu_acq-h041_run-007_eeg.edf	041	41:00:00	3600.0	500	50	19	21	1
+eeg/sub-0589_task-icu_acq-h042_run-008_eeg.edf	042	42:00:00	3600.0	500	50	19	21	1
+eeg/sub-0589_task-icu_acq-h043_run-009_eeg.edf	043	43:00:00	3600.0	500	50	19	21	1
+eeg/sub-0589_task-icu_acq-h044_run-010_eeg.edf	044	44:00:00	2225.0	500	50	19	21	1

@@ -1,0 +1,47 @@
+# I-CARE 2.1 in BIDS
+
+Continuous ICU EEG from 607 comatose patients after cardiac arrest, converted
+from the PhysioNet WFDB release (i-care 2.1, MATLAB v4 .mat + .hea) to BIDS-EEG
+with EDF recordings.
+
+## Conversion
+
+Each i-care *segment* (roughly one hour of monitoring) becomes one BIDS run. The
+EEG / ECG / REF / OTHER WFDB records of a segment share sampling rate and length
+and are merged into a single EDF, with per-channel BIDS types in channels.tsv.
+
+Entities:
+  acq-h<HHH>  hour after cardiac arrest at which the segment starts
+  run-<NNN>   i-care segment index (unique within a subject; hours are not)
+
+The conversion is numerically lossless: EDF stores the same int16 digital values
+as the source .mat, verified by comparing recovered digital samples.
+
+## Units
+
+The source WFDB records declare unit "nu" and the PhysioNet documentation states that
+"the recordings do not have units": per-channel amplitude scaling was normalised to the
+int16 range, with the scale factor kept in the WFDB gain/baseline fields.
+
+Applying that gain/baseline - exactly as the official PhysioNet Challenge 2023 loader
+does - recovers a consistent physical scale. Empirically the result is microvolts:
+median per-channel std is ~24, and the five contributing hospitals agree to within a
+small factor (13-49). On that basis channels.tsv records units as uV and the EDF
+physical dimension is uV, so MNE and other BIDS tooling scale the data correctly.
+
+This is an INFERENCE, not an upstream guarantee. Every recording sidecar carries a
+UnitsNote saying so. Treat absolute amplitudes with caution, especially when comparing
+across hospitals.
+
+A small number of channels could not have their full int16 span expressed in EDF's
+8-character physical-range header field; for those the EDF range covers the actual data
+extent instead. They are listed per recording in the sidecar under RescaledChannels.
+
+## Heterogeneity
+
+Sampling rates vary by site (200/250/256/500/512/2048 Hz) as do montages
+(19-21 EEG channels, with/without Fpz and F9) and powerline frequency (50/60 Hz).
+Sampling rates are 200/250/256/500/512/1024/2048 Hz; they are preserved at their native
+value and NOT resampled. Note the cohort spans hospitals A, B, D, E and F - there is no
+hospital C in the released data.
+Each recording's own values are in its sidecar and channels.tsv.

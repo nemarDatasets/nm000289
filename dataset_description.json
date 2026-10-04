@@ -1,0 +1,49 @@
+{
+  "Name": "I-CARE: International Cardiac Arrest REsearch consortium EEG Database (BIDS)",
+  "BIDSVersion": "1.9.0",
+  "DatasetType": "raw",
+  "License": "CC-BY-NC-SA-4.0",
+  "Authors": [
+    "Amorim, Edilberto",
+    "Zheng, Wei-Long",
+    "Ghassemi, Mohammad M.",
+    "Aghaeeaval, Mahsa",
+    "Kandhare, Pravinkumar",
+    "Karukonda, Vishnu",
+    "Lee, Jong Woo",
+    "Herman, Susan",
+    "Sivaraju, Adithya",
+    "Gaspard, Nicolas",
+    "Hofmeijer, Jeannette",
+    "van Putten, Michel J.A.M.",
+    "Sameni, Reza",
+    "Reyna, Matthew A.",
+    "Clifford, Gari D.",
+    "Westover, M. Brandon"
+  ],
+  "Acknowledgements": "Converted to BIDS from PhysioNet i-care 2.1 (doi:10.13026/m33r-bj81).",
+  "HowToAcknowledge": "Cite Amorim et al., the PhysioNet/CinC Challenge 2023 paper, and PhysioNet.",
+  "ReferencesAndLinks": [
+    "https://doi.org/10.13026/m33r-bj81",
+    "https://doi.org/10.1101/2023.08.28.23294672",
+    "https://physionet.org/content/i-care/2.1/"
+  ],
+  "SourceDatasets": [
+    {
+      "URL": "https://physionet.org/content/i-care/2.1/",
+      "Version": "2.1"
+    }
+  ],
+  "EthicsApprovals": [
+    "As stated by the original PhysioNet release (I-CARE 2.1, doi:10.13026/m33r-bj81): data collection and analysis was performed under independent Institutional Review Board approvals at participating hospitals, and a data sharing agreement was made among participating hospitals. This was a retrospective analysis of data obtained as part of the usual care and the requirement for informed consent was waived."
+  ],
+  "Funding": [
+    "American Heart Association (20CDA35310297)",
+    "CURE Epilepsy Foundation (Taking Flight Award)",
+    "Neurocritical Care Society (NCS research training fellowship)",
+    "Weil-Society of Critical Care Medicine Research Grant",
+    "NIH (1K23NS090900, 1R01NS102190, 1R01NS102574, 1R01NS107291, 1K23NS119794, R01EB030362)",
+    "Epilepsiefonds (NEF 14-18)",
+    "Dutch Heart Foundation (2018T070)"
+  ]
+}

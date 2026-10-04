@@ -1,0 +1,6 @@
+{
+  "EEGCoordinateSystem": "CapTrak",
+  "EEGCoordinateUnits": "m",
+  "EEGCoordinateSystemDescription": "IDEALISED template positions from the MNE 'standard_1020' montage, matched by electrode label. These are NOT measured positions: no digitisation was performed or distributed with I-CARE. Legacy labels T3/T4/T5/T6 were matched to the modern T7/T8/P7/P8 locations.",
+  "IntendedFor": "n/a"
+}

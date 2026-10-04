@@ -1,0 +1,9 @@
+{
+  "TaskName": "icu",
+  "TaskDescription": "Continuous ICU EEG monitoring of comatose patients after cardiac arrest, recorded for seizure detection and neuroprognostication. No task was performed; subjects were comatose throughout.",
+  "Instructions": "n/a",
+  "RecordingType": "continuous",
+  "EEGPlacementScheme": "10-20",
+  "CogAtlasID": "n/a",
+  "CogPOID": "n/a"
+}

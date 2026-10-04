@@ -1,0 +1,21 @@
+name	type	units	sampling_frequency	low_cutoff	high_cutoff	notch	status	status_description	group	n_missing_samples
+C3	EEG	uV	256	n/a	n/a	n/a	bad	flat: zero variance over the whole segment	EEG	0
+P3	EEG	uV	256	n/a	n/a	n/a	bad	flat: zero variance over the whole segment	EEG	0
+Cz	EEG	uV	256	n/a	n/a	n/a	bad	flat: zero variance over the whole segment	EEG	0
+C4	EEG	uV	256	n/a	n/a	n/a	bad	flat: zero variance over the whole segment	EEG	0
+T6	EEG	uV	256	n/a	n/a	n/a	bad	flat: zero variance over the whole segment	EEG	0
+T3	EEG	uV	256	n/a	n/a	n/a	bad	flat: zero variance over the whole segment	EEG	0
+T5	EEG	uV	256	n/a	n/a	n/a	good	n/a	EEG	0
+O1	EEG	uV	256	n/a	n/a	n/a	bad	flat: zero variance over the whole segment	EEG	0
+Pz	EEG	uV	256	n/a	n/a	n/a	bad	flat: zero variance over the whole segment	EEG	0
+O2	EEG	uV	256	n/a	n/a	n/a	bad	flat: zero variance over the whole segment	EEG	0
+P4	EEG	uV	256	n/a	n/a	n/a	bad	flat: zero variance over the whole segment	EEG	0
+F8	EEG	uV	256	n/a	n/a	n/a	bad	flat: zero variance over the whole segment	EEG	0
+T4	EEG	uV	256	n/a	n/a	n/a	good	n/a	EEG	0
+F7	EEG	uV	256	n/a	n/a	n/a	bad	flat: zero variance over the whole segment	EEG	0
+Fp1	EEG	uV	256	n/a	n/a	n/a	bad	flat: zero variance over the whole segment	EEG	0
+F3	EEG	uV	256	n/a	n/a	n/a	bad	flat: zero variance over the whole segment	EEG	0
+Fz	EEG	uV	256	n/a	n/a	n/a	bad	flat: zero variance over the whole segment	EEG	0
+Fpz	EEG	uV	256	n/a	n/a	n/a	bad	flat: zero variance over the whole segment	EEG	0
+Fp2	EEG	uV	256	n/a	n/a	n/a	bad	flat: zero variance over the whole segment	EEG	0
+F4	EEG	uV	256	n/a	n/a	n/a	good	n/a	EEG	0

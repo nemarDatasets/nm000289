@@ -1,0 +1,32 @@
+{
+  "TaskName": "icu",
+  "TaskDescription": "Continuous ICU EEG monitoring of a comatose patient after cardiac arrest. No task was performed.",
+  "Instructions": "n/a",
+  "InstitutionName": "I-CARE consortium (de-identified hospital, see participants.tsv)",
+  "Manufacturer": "n/a",
+  "SamplingFrequency": 256.0,
+  "PowerLineFrequency": 60,
+  "EEGReference": "unknown (not documented upstream)",
+  "EEGChannelCount": 20,
+  "ECGChannelCount": 2,
+  "EMGChannelCount": 0,
+  "EOGChannelCount": 0,
+  "MiscChannelCount": 0,
+  "RecordingDuration": 3157.0,
+  "RecordingType": "continuous",
+  "SoftwareFilters": "n/a",
+  "HardwareFilters": "n/a",
+  "HourAfterArrest": 41,
+  "SegmentIndex": 35,
+  "StartTimeAfterArrest": "41:07:23",
+  "EndTimeAfterArrest": "41:59:59",
+  "BadChannelCount": 0,
+  "SamplingFrequencies": [
+    256.0
+  ],
+  "RescaledChannels": [],
+  "RescaledChannelsNote": "Channels whose full int16 physical span did not fit EDF's 8-character header field; their EDF physical range covers the actual data extent instead, preserving physical values at full int16 resolution but not the source digital codes.",
+  "MissingSampleCount": 0,
+  "MissingSampleHandling": "Samples flagged missing in the source WFDB data (digital code -32768) were filled with the ADC-zero physical value; per-channel counts are in channels.tsv.",
+  "UnitsNote": "The source WFDB records declare unit 'nu' (unitless). Values here are the gain/baseline-rescaled signals, as produced by the official PhysioNet Challenge 2023 loader; their empirical amplitude distribution is consistent with microvolts, and they are labelled uV on that basis. Treat absolute amplitudes with caution."
+}

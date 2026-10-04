@@ -1,0 +1,86 @@
+{
+  "hospital": {
+    "Description": "De-identified source hospital (A-G) of the I-CARE consortium."
+  },
+  "age": {
+    "Description": "Age in years at time of cardiac arrest.",
+    "Units": "years"
+  },
+  "sex": {
+    "Description": "Biological sex.",
+    "Levels": {
+      "M": "male",
+      "F": "female"
+    }
+  },
+  "rosc": {
+    "Description": "Time from cardiac arrest to return of spontaneous circulation.",
+    "Units": "minutes"
+  },
+  "ohca": {
+    "Description": "Out-of-hospital cardiac arrest.",
+    "Levels": {
+      "True": "out-of-hospital",
+      "False": "in-hospital"
+    }
+  },
+  "shockable_rhythm": {
+    "Description": "Initial cardiac rhythm was shockable (VF/VT).",
+    "Levels": {
+      "True": "shockable",
+      "False": "non-shockable"
+    }
+  },
+  "ttm": {
+    "Description": "Targeted temperature management setpoint; n/a if not applied.",
+    "Units": "degree Celsius"
+  },
+  "outcome": {
+    "Description": "Dichotomised neurological outcome at hospital discharge.",
+    "Levels": {
+      "Good": "CPC 1-2",
+      "Poor": "CPC 3-5"
+    }
+  },
+  "cpc": {
+    "Description": "Cerebral Performance Category at hospital discharge.",
+    "Levels": {
+      "1": "good cerebral performance",
+      "2": "moderate disability",
+      "3": "severe disability",
+      "4": "coma/vegetative state",
+      "5": "death"
+    }
+  },
+  "n_runs": {
+    "Description": "Number of BIDS runs (I-CARE segments) for this subject."
+  },
+  "first_hour": {
+    "Description": "Hour after cardiac arrest of the earliest segment.",
+    "Units": "hours"
+  },
+  "last_hour": {
+    "Description": "Hour after cardiac arrest of the latest segment.",
+    "Units": "hours"
+  },
+  "n_hours_covered": {
+    "Description": "Number of distinct post-arrest hours with data."
+  },
+  "recording_hours": {
+    "Description": "Total recorded signal duration.",
+    "Units": "hours"
+  },
+  "powerline_frequency": {
+    "Description": "Mains frequency at the recording site.",
+    "Units": "Hz"
+  },
+  "n_eeg_channels": {
+    "Description": "EEG channel count(s) across this subject's runs."
+  },
+  "bad_channel_fraction": {
+    "Description": "Fraction of channel-instances automatically flagged bad (flat / near-flat / mostly NaN)."
+  },
+  "sampling_frequencies": {
+    "Description": "Sampling rate(s) used for this subject, in Hz; several rates are separated by '/'."
+  }
+}
