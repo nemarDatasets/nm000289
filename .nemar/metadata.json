@@ -1,0 +1,160 @@
+{
+  "version": "2.0",
+  "pipeline_stage": "validated",
+  "authors": {
+    "Amorim, Edilberto": {
+      "orcid": "0000-0001-6972-5622"
+    },
+    "Zheng, Wei-Long": {
+      "orcid": "0000-0002-9474-6369"
+    },
+    "Ghassemi, Mohammad M.": {},
+    "Aghaeeaval, Mahsa": {},
+    "Kandhare, Pravinkumar": {},
+    "Karukonda, Vishnu": {},
+    "Lee, Jong Woo": {},
+    "Herman, Susan": {},
+    "Sivaraju, Adithya": {},
+    "Gaspard, Nicolas": {},
+    "Hofmeijer, Jeannette": {},
+    "van Putten, Michel J.A.M.": {},
+    "Sameni, Reza": {},
+    "Reyna, Matthew A.": {
+      "orcid": "0000-0003-4688-7965",
+      "affiliations": [
+        {
+          "name": "Department of Biomedical Informatics, Emory University"
+        }
+      ]
+    },
+    "Clifford, Gari D.": {},
+    "Westover, M. Brandon": {}
+  },
+  "related_identifiers": [
+    {
+      "identifier": "10.13026/m33r-bj81",
+      "identifier_type": "DOI",
+      "relation_type": "IsDerivedFrom"
+    },
+    {
+      "identifier": "10.1101/2023.08.28.23294672",
+      "identifier_type": "DOI",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/nm000289",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/nm000289",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    }
+  ],
+  "funding_references": [
+    {
+      "funder_name": "CURE Epilepsy Foundation (Taking Flight Award)"
+    },
+    {
+      "funder_name": "Neurocritical Care Society (NCS research training fellowship)"
+    },
+    {
+      "funder_name": "Weil-Society of Critical Care Medicine Research Grant"
+    },
+    {
+      "funder_name": "American Heart Association",
+      "award_number": "20CDA35310297"
+    },
+    {
+      "funder_name": "CURE Epilepsy Foundation",
+      "award_title": "Taking Flight Award"
+    },
+    {
+      "funder_name": "Neurocritical Care Society",
+      "award_title": "NCS research training fellowship"
+    },
+    {
+      "funder_name": "Society of Critical Care Medicine",
+      "award_title": "Weil-Society of Critical Care Medicine Research Grant"
+    },
+    {
+      "funder_name": "NIH",
+      "award_number": "1K23NS090900"
+    },
+    {
+      "funder_name": "NIH",
+      "award_number": "1R01NS102190"
+    },
+    {
+      "funder_name": "NIH",
+      "award_number": "1R01NS102574"
+    },
+    {
+      "funder_name": "NIH",
+      "award_number": "1R01NS107291"
+    },
+    {
+      "funder_name": "NIH",
+      "award_number": "1K23NS119794"
+    },
+    {
+      "funder_name": "NIH",
+      "award_number": "R01EB030362"
+    },
+    {
+      "funder_name": "Epilepsiefonds",
+      "award_number": "NEF 14-18"
+    },
+    {
+      "funder_name": "Dutch Heart Foundation",
+      "award_number": "2018T070"
+    }
+  ],
+  "title": "I-CARE: International Cardiac Arrest REsearch consortium EEG Database (BIDS)",
+  "license": "CC-BY-NC-SA-4.0",
+  "dataset_type": "raw",
+  "resource_type_general": "Dataset",
+  "modalities": [
+    "eeg"
+  ],
+  "resource_type_specific": "EEG Dataset",
+  "sizes": [
+    "1.53 TB (35796 files)"
+  ],
+  "formats": [
+    ".edf",
+    ".json",
+    ".tsv"
+  ],
+  "description": "Continuous ICU EEG recordings from 607 comatose patients after cardiac arrest, collected by the International Cardiac Arrest REsearch (I-CARE) consortium across five hospitals. This is a BIDS-EEG conversion of the PhysioNet I-CARE 2.1 release, with recordings stored as EDF at native sampling rates and montages. The data support research on neurological outcome prognostication after cardiac arrest.",
+  "methods_description": "Each roughly one-hour monitoring segment from the PhysioNet WFDB release (MATLAB v4 .mat + .hea) became one BIDS run. EEG, ECG, reference and other records were merged into one EDF per segment, preserving the int16 digital values. Amplitudes were recovered by applying the WFDB gain and baseline, and are inferred to be in microvolts. Sampling rates (200-2048 Hz), montages (19-21 EEG channels) and powerline frequency (50/60 Hz) vary by site.",
+  "keywords": [
+    {
+      "term": "EEG"
+    },
+    {
+      "term": "Out-of-Hospital Cardiac Arrest",
+      "subject_scheme": "MeSH",
+      "scheme_uri": "https://id.nlm.nih.gov/mesh/",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D058687"
+    },
+    {
+      "term": "Coma",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D003128"
+    },
+    {
+      "term": "intensive care"
+    },
+    {
+      "term": "Prognosis",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D011379"
+    },
+    {
+      "term": "continuous EEG monitoring"
+    }
+  ],
+  "source_hash": "e57b75b7978eb7a06be245fc7e4339008aaf9f327e5a7f7b2af20a882d750235"
+}
