@@ -1,6 +1,11 @@
 {
   "version": "2.0",
   "pipeline_stage": "validated",
+  "title": "I-CARE: International Cardiac Arrest REsearch consortium EEG Database (BIDS)",
+  "description": "The I-CARE database contains continuous EEG and, where available, ECG recordings with baseline clinical information from comatose adults after cardiac arrest. Data were assembled by seven academic hospitals in the United States, the Netherlands and Belgium for neurological prognostication. This BIDS conversion of PhysioNet release 2.1 covers 607 patients and 36,123 hourly recordings, with outcomes given as dichotomised Cerebral Performance Category.",
+  "methods_description": "Continuous EEG was recorded using standard 10-20 electrodes (19-21 channels), with ECG and reference channels where present. Sampling rates varied by site (200-2048 Hz). Monitoring began within hours of return of spontaneous circulation and continued for hours to days. WFDB records were losslessly converted to EDF per hourly segment, with units inferred as microvolts.",
+  "license": "CC-BY-NC-SA-4.0",
+  "dataset_type": "raw",
   "authors": {
     "Amorim, Edilberto": {
       "orcid": "0000-0001-6972-5622"
@@ -30,6 +35,33 @@
     "Clifford, Gari D.": {},
     "Westover, M. Brandon": {}
   },
+  "keywords": [
+    {
+      "term": "EEG"
+    },
+    {
+      "term": "Out-of-Hospital Cardiac Arrest",
+      "subject_scheme": "MeSH",
+      "scheme_uri": "https://id.nlm.nih.gov/mesh/",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D058687"
+    },
+    {
+      "term": "Coma",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D003128"
+    },
+    {
+      "term": "Electroencephalography",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
+    },
+    {
+      "term": "neurological prognostication"
+    },
+    {
+      "term": "intensive care"
+    }
+  ],
   "related_identifiers": [
     {
       "identifier": "10.13026/m33r-bj81",
@@ -49,6 +81,11 @@
     {
       "identifier": "https://nemar.org/dataset/nm000289",
       "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "10.1097/ccm.0000000000006074",
+      "identifier_type": "DOI",
       "relation_type": "IsDescribedBy"
     }
   ],
@@ -111,50 +148,20 @@
       "award_number": "2018T070"
     }
   ],
-  "title": "I-CARE: International Cardiac Arrest REsearch consortium EEG Database (BIDS)",
-  "license": "CC-BY-NC-SA-4.0",
-  "dataset_type": "raw",
   "resource_type_general": "Dataset",
+  "resource_type_specific": "EEG Dataset",
   "modalities": [
     "eeg"
   ],
-  "resource_type_specific": "EEG Dataset",
   "sizes": [
     "1.53 TB (35796 files)"
   ],
   "formats": [
     ".edf",
     ".json",
-    ".tsv"
+    ".md",
+    ".tsv",
+    ".yml"
   ],
-  "description": "Continuous ICU EEG recordings from 607 comatose patients after cardiac arrest, collected by the International Cardiac Arrest REsearch (I-CARE) consortium across five hospitals. This is a BIDS-EEG conversion of the PhysioNet I-CARE 2.1 release, with recordings stored as EDF at native sampling rates and montages. The data support research on neurological outcome prognostication after cardiac arrest.",
-  "methods_description": "Each roughly one-hour monitoring segment from the PhysioNet WFDB release (MATLAB v4 .mat + .hea) became one BIDS run. EEG, ECG, reference and other records were merged into one EDF per segment, preserving the int16 digital values. Amplitudes were recovered by applying the WFDB gain and baseline, and are inferred to be in microvolts. Sampling rates (200-2048 Hz), montages (19-21 EEG channels) and powerline frequency (50/60 Hz) vary by site.",
-  "keywords": [
-    {
-      "term": "EEG"
-    },
-    {
-      "term": "Out-of-Hospital Cardiac Arrest",
-      "subject_scheme": "MeSH",
-      "scheme_uri": "https://id.nlm.nih.gov/mesh/",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D058687"
-    },
-    {
-      "term": "Coma",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D003128"
-    },
-    {
-      "term": "intensive care"
-    },
-    {
-      "term": "Prognosis",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D011379"
-    },
-    {
-      "term": "continuous EEG monitoring"
-    }
-  ],
-  "source_hash": "e57b75b7978eb7a06be245fc7e4339008aaf9f327e5a7f7b2af20a882d750235"
+  "source_hash": "eba0f1acb59d1d0ad6b50927ad364040c86f2eb74cb8e007244b2403b2f7f3e5"
 }
