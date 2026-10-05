@@ -1,47 +1,33 @@
-# I-CARE 2.1 in BIDS
+# I-CARE: International Cardiac Arrest REsearch consortium EEG Database (BIDS)
 
-Continuous ICU EEG from 607 comatose patients after cardiac arrest, converted
-from the PhysioNet WFDB release (i-care 2.1, MATLAB v4 .mat + .hea) to BIDS-EEG
-with EDF recordings.
+## 1. The dataset
 
-## Conversion
+### Study population and recordings
 
-Each i-care *segment* (roughly one hour of monitoring) becomes one BIDS run. The
-EEG / ECG / REF / OTHER WFDB records of a segment share sampling rate and length
-and are merged into a single EDF, with per-channel BIDS types in channels.tsv.
+The International Cardiac Arrest REsearch consortium (I-CARE) database holds continuous EEG and, where available, ECG recordings with baseline clinical information from comatose adults after cardiac arrest, assembled by seven academic hospitals in the United States, the Netherlands and Belgium. Patients had return of spontaneous circulation (ROSC) but remained comatose (Glasgow Coma Score <= 8). EEG monitoring typically began within hours of the arrest and continued for hours to days as part of neurological prognostication. Ages above 89 are recorded as 90, and all times are relative to ROSC.
 
-Entities:
-  acq-h<HHH>  hour after cardiac arrest at which the segment starts
-  run-<NNN>   i-care segment index (unique within a subject; hours are not)
+### Clinical variables and outcome
 
-The conversion is numerically lossless: EDF stores the same int16 digital values
-as the source .mat, verified by comparing recovered digital samples.
+Age, sex, hospital, out-of-hospital versus in-hospital arrest, initial rhythm (shockable or not), time to ROSC and targeted temperature management (33 C, 36 C or none). Outcome is the Cerebral Performance Category (CPC), dichotomised as good (CPC 1-2) or poor (CPC 3-5). All of these are columns of `participants.tsv`, described in `participants.json`.
 
-## Units
+### What this deposit contains
 
-The source WFDB records declare unit "nu" and the PhysioNet documentation states that
-"the recordings do not have units": per-channel amplitude scaling was normalised to the
-int16 range, with the scale factor kept in the WFDB gain/baseline fields.
+The public release, version 2.1 on PhysioNet (doi:10.13026/m33r-bj81): 607 patients from five of the seven hospitals (de-identified as A, B, D, E and F), 36,123 hourly recordings, 32,712 hours, about 1.5 TB. A further 413 patients are held back by PhysioNet as the hidden test set of the George B. Moody PhysioNet Challenge 2023, for which these data were the training set. Recordings use the standardised 10-20 EEG channels (19-21 per recording, with or without Fpz and F9) plus ECG, reference and other channels where present. Sampling rates vary by site (200, 250, 256, 500, 512, 1024 or 2048 Hz) and are kept at their native value; powerline frequency is 50 or 60 Hz.
 
-Applying that gain/baseline - exactly as the official PhysioNet Challenge 2023 loader
-does - recovers a consistent physical scale. Empirically the result is microvolts:
-median per-channel std is ~24, and the five contributing hospitals agree to within a
-small factor (13-49). On that basis channels.tsv records units as uV and the EDF
-physical dimension is uV, so MNE and other BIDS tooling scale the data correctly.
+### Licence and citation
 
-This is an INFERENCE, not an upstream guarantee. Every recording sidecar carries a
-UnitsNote saying so. Treat absolute amplitudes with caution, especially when comparing
-across hospitals.
+CC BY-NC-SA 4.0, as on PhysioNet. Please cite Amorim et al. (2023), I-CARE: International Cardiac Arrest REsearch consortium Database, version 2.1, PhysioNet, doi:10.13026/m33r-bj81, and Amorim et al., "The International Cardiac Arrest Research Consortium Electroencephalography Database", Critical Care Medicine, 2023, doi:10.1097/CCM.0000000000006074.
 
-A small number of channels could not have their full int16 span expressed in EDF's
-8-character physical-range header field; for those the EDF range covers the actual data
-extent instead. They are listed per recording in the sidecar under RescaledChannels.
+## 2. This BIDS conversion
 
-## Heterogeneity
+### Layout
 
-Sampling rates vary by site (200/250/256/500/512/2048 Hz) as do montages
-(19-21 EEG channels, with/without Fpz and F9) and powerline frequency (50/60 Hz).
-Sampling rates are 200/250/256/500/512/1024/2048 Hz; they are preserved at their native
-value and NOT resampled. Note the cohort spans hospitals A, B, D, E and F - there is no
-hospital C in the released data.
-Each recording's own values are in its sidecar and channels.tsv.
+Each I-CARE segment (ending on the hour) is one BIDS run, `sub-<NNNN>/eeg/sub-<NNNN>_task-icu_acq-h<HHH>_run-<NNN>_eeg.edf`, where `acq-h<HHH>` is the hour after cardiac arrest at which the segment starts and `run-<NNN>` the segment index. The EEG, ECG, REF and OTHER WFDB records of a segment are merged into one EDF. Per recording, `channels.tsv` gives each channel's type, source record (`group`) and missing-sample count, and `eeg.json` its sampling rate, hour after arrest and conversion notes. Per patient, `sub-<NNNN>_scans.tsv` lists each run's hour, duration, sampling rate and channel counts. The electrodes files hold template 10-20 positions, not digitised ones.
+
+### Signal values and units
+
+The conversion is numerically lossless: EDF stores the source int16 digital values. A few channels whose full range did not fit EDF's header field are listed under `RescaledChannels` in the recording sidecar. The WFDB records declare no unit ("nu"). Applying their gain and baseline, as the official Challenge loader does, gives values whose amplitude distribution is consistent with microvolts, so channels are labelled uV. This is an inference, stated in every sidecar's `UnitsNote`; compare absolute amplitudes across hospitals with caution. Samples flagged missing in the source (digital code -32768) are filled with the ADC-zero value and counted per channel.
+
+### Changes made for this deposit
+
+The participants column `sampling_frequency` was renamed `sampling_frequencies` (the BIDS name is reserved for a single number), a root `task-icu_channels.json` describes the two extra `channels.tsv` columns, and conversion lock files were removed.
