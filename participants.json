@@ -1,6 +1,6 @@
 {
   "hospital": {
-    "Description": "De-identified source hospital (A-G) of the I-CARE consortium."
+    "Description": "De-identified source hospital of the I-CARE consortium. This public release holds patients from hospitals A, B, D, E and F; C and G are not in it."
   },
   "age": {
     "Description": "Age in years at time of cardiac arrest.",
