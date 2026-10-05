@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "I-CARE: International Cardiac Arrest REsearch consortium EEG Database (BIDS)",
-  "description": "The I-CARE database contains continuous EEG and, where available, ECG recordings with baseline clinical information from comatose adults after cardiac arrest. Data were assembled by seven academic hospitals in the United States, the Netherlands and Belgium for neurological prognostication. This BIDS conversion of PhysioNet release 2.1 covers 607 patients and 36,123 hourly recordings, with outcomes given as dichotomised Cerebral Performance Category.",
-  "methods_description": "Continuous EEG was recorded using standard 10-20 electrodes (19-21 channels), with ECG and reference channels where present. Sampling rates varied by site (200-2048 Hz). Monitoring began within hours of return of spontaneous circulation and continued for hours to days. WFDB records were losslessly converted to EDF per hourly segment, with units inferred as microvolts.",
+  "description": "The I-CARE database contains continuous EEG and, where available, ECG recordings from comatose adults after cardiac arrest, collected at five academic hospitals in the United States, the Netherlands and Belgium. It includes baseline clinical variables and dichotomised Cerebral Performance Category outcomes to support neurological prognostication. This BIDS conversion covers the PhysioNet release 2.1: 607 patients and 36,123 hourly recordings, which served as the training set for the George B. Moody PhysioNet Challenge 2023.",
+  "methods_description": "Continuous EEG was recorded with standard 10-20 electrodes (19-21 channels), plus ECG, reference and other channels where present. Recording began within hours of the arrest and continued for hours to days. Sampling rates varied by site (200-2048 Hz). The source WFDB records were converted losslessly to EDF, one run per hourly segment. Channel units are inferred to be microvolts.",
   "license": "CC-BY-NC-SA-4.0",
   "dataset_type": "raw",
   "authors": {
@@ -51,15 +51,20 @@
       "value_uri": "http://id.nlm.nih.gov/mesh/D003128"
     },
     {
+      "term": "Prognosis",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D011379"
+    },
+    {
       "term": "Electroencephalography",
       "subject_scheme": "MeSH",
       "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
     },
     {
-      "term": "neurological prognostication"
+      "term": "intensive care"
     },
     {
-      "term": "intensive care"
+      "term": "neurological outcome"
     }
   ],
   "related_identifiers": [
@@ -163,5 +168,5 @@
     ".tsv",
     ".yml"
   ],
-  "source_hash": "eba0f1acb59d1d0ad6b50927ad364040c86f2eb74cb8e007244b2403b2f7f3e5"
+  "source_hash": "2ad6423529bb96e283a2c2df66c97586bbcefa97920c3b9fbe305434e263a447"
 }
