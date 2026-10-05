@@ -1,3 +1,5 @@
+[![DOI](https://img.shields.io/badge/DOI-10.82901%2Fnemar.nm000289-blue)](https://doi.org/10.82901/nemar.nm000289)
+
 # I-CARE: International Cardiac Arrest REsearch consortium EEG Database (BIDS)
 
 ## 1. The dataset
