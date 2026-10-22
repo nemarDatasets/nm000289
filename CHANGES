@@ -1,0 +1,5 @@
+1.0.1 2026-10-21
+  - sub-0765 run-021: the EEG recording re-uploaded under a new key; the object of 1.0.0 was truncated on storage (17,956,864 of 36,869,376 bytes).
+
+1.0.0 2026-10-05
+  - Initial release.
