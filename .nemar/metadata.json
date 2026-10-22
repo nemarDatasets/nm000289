@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "I-CARE: International Cardiac Arrest REsearch consortium EEG Database (BIDS)",
-  "description": "The I-CARE database contains continuous EEG and, where available, ECG recordings from comatose adults after cardiac arrest, collected at five academic hospitals in the United States, the Netherlands and Belgium. It includes baseline clinical variables and dichotomised Cerebral Performance Category outcomes to support neurological prognostication. This BIDS conversion covers the PhysioNet release 2.1: 607 patients and 36,123 hourly recordings, which served as the training set for the George B. Moody PhysioNet Challenge 2023.",
-  "methods_description": "Continuous EEG was recorded with standard 10-20 electrodes (19-21 channels), plus ECG, reference and other channels where present. Recording began within hours of the arrest and continued for hours to days. Sampling rates varied by site (200-2048 Hz). The source WFDB records were converted losslessly to EDF, one run per hourly segment. Channel units are inferred to be microvolts.",
+  "description": "The I-CARE database contains continuous EEG and, where available, ECG recordings with baseline clinical information from comatose adult patients after cardiac arrest, collected at academic hospitals in the United States, the Netherlands and Belgium. This BIDS conversion of PhysioNet release 2.1 covers 607 patients and about 32,700 hours of hourly recordings. Outcome is given as the dichotomised Cerebral Performance Category. The data support neurological prognostication research and were the training set of the George B. Moody PhysioNet Challenge 2023.",
+  "methods_description": "Continuous EEG with standard 10-20 channels (19-21 per recording) plus ECG and reference channels was recorded in ICU patients, at native sampling rates of 200-2048 Hz depending on site. WFDB records were merged per hourly segment into EDF files without numerical loss. Channel units were inferred to be microvolts.",
   "license": "CC-BY-NC-SA-4.0",
   "dataset_type": "raw",
   "authors": {
@@ -54,11 +54,6 @@
       "term": "Prognosis",
       "subject_scheme": "MeSH",
       "value_uri": "http://id.nlm.nih.gov/mesh/D011379"
-    },
-    {
-      "term": "Electroencephalography",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
     },
     {
       "term": "intensive care"
@@ -117,8 +112,8 @@
       "award_title": "NCS research training fellowship"
     },
     {
-      "funder_name": "Society of Critical Care Medicine",
-      "award_title": "Weil-Society of Critical Care Medicine Research Grant"
+      "funder_name": "Weil-Society of Critical Care Medicine",
+      "award_title": "Research Grant"
     },
     {
       "funder_name": "NIH",
@@ -159,7 +154,7 @@
     "eeg"
   ],
   "sizes": [
-    "1.53 TB (35796 files)"
+    "1.53 TB (35797 files)"
   ],
   "formats": [
     ".edf",
@@ -168,5 +163,5 @@
     ".tsv",
     ".yml"
   ],
-  "source_hash": "2ad6423529bb96e283a2c2df66c97586bbcefa97920c3b9fbe305434e263a447"
+  "source_hash": "fdf4a99e1a0b4e70eb419d21b68b79a616ab9d5256dc165a49ebb05470d7eb66"
 }
